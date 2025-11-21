@@ -29,8 +29,6 @@ Each component is independent and testable.
 ## 📂 Repository Structure
 
 
-
-.
 ├── docs/ # PRD, architecture, pipeline specs
 ├── config/ # settings, data paths, regime rules
 ├── data/ # raw/processed/features/predictions/etc.
