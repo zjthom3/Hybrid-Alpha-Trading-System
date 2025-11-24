@@ -1,0 +1,41 @@
+labels:
+  bull: 0
+  bear: 1
+  choppy: 2
+  crash: 3
+
+rules:
+  trend_ma_short: 50
+  trend_ma_long: 200
+  vol_lookback: 20
+  high_vol_zscore: 1.5
+  crash_drawdown_threshold: -0.20
+
+weights:
+  bull:
+    trend_alpha: 0.5
+    mean_reversion_alpha: 0.1
+    vol_alpha: 0.2
+    rel_strength_alpha: 0.2
+    ml: 0.4
+  bear:
+    trend_alpha: 0.2
+    mean_reversion_alpha: 0.4
+    vol_alpha: 0.3
+    rel_strength_alpha: 0.2
+    ml: 0.4
+  choppy:
+    trend_alpha: 0.1
+    mean_reversion_alpha: 0.6
+    vol_alpha: 0.2
+    rel_strength_alpha: 0.2
+    ml: 0.3
+  crash:
+    trend_alpha: 0.0
+    mean_reversion_alpha: 0.0
+    vol_alpha: 0.6
+    rel_strength_alpha: 0.2
+    ml: 0.2
+
+defaults:
+  regime_label: "choppy"

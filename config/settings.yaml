@@ -1,0 +1,37 @@
+tickers:
+  - SPY
+  - NVDA
+
+benchmark: SPY
+
+backtest:
+  start_date: "2018-01-01"
+  end_date: "2024-12-31"
+  strategy_name: "hybrid_alpha_mvp"
+
+features:
+  lookbacks:
+    sma: [10, 20, 50, 200]
+    returns: [1, 5, 20, 60]
+    realized_vol: [10, 20, 60]
+  atr_period: 14
+  volume_lookback: 20
+
+ml:
+  horizons: [1, 3, 5]
+  model_name: "lightgbm_v1"
+  test_size: 0.2
+
+risk:
+  target_vol: 0.15
+  max_weight: 0.10
+
+paths:
+  data_root: "data"
+  features_dir: "data/features"
+  signals_dir: "data/signals"
+  regimes_dir: "data/regimes"
+  predictions_dir: "data/predictions"
+  alpha_scores_dir: "data/meta/alpha_scores"
+  positions_dir: "data/positions"
+  backtests_dir: "data/backtests"

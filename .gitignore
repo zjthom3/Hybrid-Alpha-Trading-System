@@ -1,0 +1,19 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data and artifacts
+data/
+models/ml/artifacts/
+
+# IDE
+.idea/
+.vscode/

@@ -1,0 +1,15 @@
+data_root: "data"
+
+raw_files:
+  pattern: "{ticker}_raw.parquet"
+  directory: "data/raw"
+
+processed_files:
+  pattern: "{ticker}.parquet"
+  directory: "data/processed"
+
+benchmark: "SPY"
+
+options:
+  file_format: "parquet"
+  date_column: "date"
